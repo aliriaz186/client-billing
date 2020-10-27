@@ -53,7 +53,7 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a class="navbar-brand" href="{{ url('/') }}">App</a>
+                    <a class="navbar-brand" href="{{ url('/') }}">Ashley Solutions</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
                     </div>
@@ -83,7 +83,13 @@
                         <li class="">
                             <a href="{{env('APP_URL')}}/home">
                                 <i class="fa fa-tachometer-alt"></i>
-                                <span>Dashboard</span>
+                                <span>Pay & book</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="{{env('APP_URL')}}/history">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span>Payment History</span>
                             </a>
                         </li>
 {{--                        @if(\Illuminate\Support\Facades\Session::get('isAdmin') === true)--}}

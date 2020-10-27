@@ -9,6 +9,20 @@
         </div>
     </div>
     <div class="px-5">
+            <div class="container">
+                <h3 class="mt-4 mb-3">Select Package and book</h3>
+                <form method="post" action="{{url("/save-package")}}" style="width: 400px">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <label>Select package:</label>
+                       <select id="package" name="package" class="form-control">
+                           <option value="1" selected>5-10 hours ($100/hr)</option>
+                           <option value="2">40 hours a week for 3 months hours ($100/hr)</option>
+                       </select>
+                    </div>
+                    <button type="submit" id="btnFetch" class="btn btn-primary spinner-border">Save</button>
+                </form>
+            </div>
 {{--        <div class="row">--}}
 {{--            @if(count($eventsList) != 0)--}}
 {{--                @foreach($eventsList as $event)--}}

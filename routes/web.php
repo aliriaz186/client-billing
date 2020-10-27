@@ -49,6 +49,7 @@ Route::get('logout-user', function (){
 Route::post('login', "AdminController@login")->name('login');
 
 Route::get('/home', "HomeController@showDashboard")->middleware('dashboard');
+Route::get('/history', "HomeController@history")->middleware('dashboard');
 
 Route::get('staff', 'StaffController@getStaffListView')->middleware('dashboard');
 Route::get('add-staff', "StaffController@getAddStaffView")->middleware('dashboard');
@@ -60,3 +61,5 @@ Route::post('save-edited-staff', "StaffController@saveEditedStaff");
 
 Route::post('login-user', "AuthController@login");
 Route::post('create-new-account', "AuthController@signup");
+Route::post('send-email', "HomeController@sendMail");
+Route::post('save-package', "HomeController@savePackage");
